@@ -1,0 +1,32 @@
+.picture_left {
+  overflow:hidden;
+  zoom:1;
+}
+.picture_left .picture,
+.picture_left .caption {
+  float:left;
+}
+.picture_left .picture {
+  width:375px;
+  min-height:265px;
+  text-align:center;
+}
+.picture_left .picture img {
+  max-width:375px;
+}
+.picture_left .caption {
+  width:270px;
+  min-height:265px;
+  background:#3C3E3D;
+  opacity:0.8;
+}
+.picture_left .caption .caption_contents {
+  padding:10px;
+}
+.picture_left .caption p:first-child,
+.picture_left .caption h3:first-child {
+  margin-top:0
+}
+.picture_left .caption .caption_contents p {
+  font-weight:bold;
+}

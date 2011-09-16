@@ -1,0 +1,31 @@
+.sidebar .navigation {
+  margin-bottom:25px;
+}
+.navigation .nav_heading {
+  border-top:3px solid #747273;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:14px;
+  padding:3px 0;
+}
+.navigation li {
+  border-bottom:1px solid #fff;
+}
+.navigation li:first-child,
+.navigation li:last-child {
+  border-bottom:0;
+}
+.navigation a {
+  color:#fff;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-size:11px;
+  display:block;
+  padding-top:4px;
+  padding-bottom:4px;
+}
+.navigation .active a {
+  background:#B2352E;
+  font-weight:bold;
+}
+

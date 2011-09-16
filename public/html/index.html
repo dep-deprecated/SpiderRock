@@ -15,6 +15,8 @@
   <link href="../stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="../stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="../stylesheets/common.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/elements.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/sidebar.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="../stylesheets/home.css" media="screen" rel="stylesheet" type="text/css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
@@ -26,30 +28,30 @@
 </head>
 <body>
   <div id="wrapper" class="container">
-    <div class="span-24">
-      <h1>SPIDERROCK</h1>
+    <div class="span-24 header">
+      <h1><a href="/">SPIDERROCK</a></h1>
     </div>
     <div class="span-6 sidebar">
       <ul class="navigation">
-        <li class="header">Spiderrock Solutions</li>
+        <li class="nav_heading">Spiderrock Solutions</li>
         <li><a href="#" class="algo">Algo Strategies</a></li>
-        <li class="active"><a href="#">Navigation</a></li>
-        <li><a href="#">Navigation</a></li>
-        <li><a href="#">Navigation</a></li>
-      </ul>
-      <ul class="navigation">
-        <li class="header">You &amp; Spiderrock</li>
-        <li class="active"><a href="#">Navigation</a></li>
         <li><a href="#">Navigation</a></li>
         <li><a href="#">Navigation</a></li>
         <li><a href="#">Navigation</a></li>
       </ul>
       <ul class="navigation">
-        <li class="header">About Spiderrock</li>
+        <li class="nav_heading">You &amp; Spiderrock</li>
         <li><a href="#">Navigation</a></li>
         <li><a href="#">Navigation</a></li>
         <li><a href="#">Navigation</a></li>
-        <li class="active"><a href="#">Navigation</a></li>
+        <li><a href="#">Navigation</a></li>
+      </ul>
+      <ul class="navigation">
+        <li class="nav_heading">About Spiderrock</li>
+        <li><a href="#">Navigation</a></li>
+        <li><a href="#">Navigation</a></li>
+        <li><a href="#">Navigation</a></li>
+        <li><a href="#">Navigation</a></li>
       </ul>
     </div>
     <div class="span-18 contents last">
@@ -59,19 +61,19 @@
           <img src="http://fpoimg.com/375x265" />
         </div>
         <div class="caption">
-          <p>
-            WHY USE SPIDER<strong>ROCK</STRONG> <span class="algos">ALGOS</span>?
-          </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
+          <div class="caption_contents">
+            <p>
+              WHY USE SPIDER<strong>ROCK</STRONG> <span class="algo"><strong>ALGOS</strong></span>?
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et.</p>
+          </div>
         </div>
       </div>
-      <blockquote>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue risus a ante sollicitudin eu imperdiet massa posuere. Quisque semper lobortis neque vitae rhoncus. <a href="#">Lorem</a>.
-      </blockquote>
-      <p>
+      <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue risus a ante sollicitudin eu imperdiet massa posuere. Quisque semper lobortis neque vitae rhoncus. <a href="#">Lorem</a>.</blockquote>
+      <p class="loud">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Maecenas at lectus</a> arcu. Praesent adipiscing, dolor a venenatis lacinia, tortor felis egestas felis, nec tincidunt ligula quam eget odio. Sed condimentum, ipsum a faucibus scelerisque, felis tellus malesuada augue, nec euismod arcu ligula et nibh. Aliquam vel ipsum id libero adipiscing faucibus quis id libero. Nam libero diam, facilisis vitae malesuada a, semper a quam. Duis ante est, sodales et mattis in, faucibus et tellus. Aenean.
       </p>
       <h3>This is a subheading</h3>
