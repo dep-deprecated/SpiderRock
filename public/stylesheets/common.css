@@ -1,3 +1,10 @@
+#footer .footer_links a,
+.sidebar h3,
+.contents h2,
+.sidebar a {
+  font-family: 'Lato', sans-serif;
+}
+
 a {
   color:#11B1F8;
   text-decoration:none;
@@ -63,12 +70,21 @@ blockquote {
   clear:both;
   line-height:19px;
 }
+blockquote h3 {
+  margin-top:0;
+}
+blockquote ul {
+  margin-left:20px;
+}
 .contents ul li {
   background:url(../images/chrome/throbblers/circle_bullet.png) 0 1px no-repeat;
   padding:0 0 20px 18px;
 }
 .contents ul ul {
-  margin-top:10px;
+  margin-top:15px;
+}
+.contents ul ul li:last-child {
+  padding-bottom:0;
 }
 ul.picture_driven,
 ul.picture_driven li {
@@ -82,6 +98,7 @@ ul.picture_driven li .caption {
 ul.picture_driven li {
   clear:both;
   padding:20px 0;
+  background:none;
 }
 ul.picture_driven .picture {
   width:135px;
@@ -93,9 +110,12 @@ ul.picture_driven .picture img {
 ul.picture_driven .caption {
   width:445px;
 }
-ul.picture_driven .caption ul li {
+ul.dashed li {
   background:url(../images/chrome/throbblers/dash_bullet.png) 0 8px no-repeat;
   padding:0 0 0 8px;
+  text-transform:none;
+  font-weight:normal;
+  font-size:12px;
 }
 img.bordered {
   border:3px solid #2B2B2B;

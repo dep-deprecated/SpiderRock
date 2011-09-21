@@ -1,33 +1,30 @@
-.sidebar h3,
-.sidebar a {
-  font-family: 'Puritan', sans-serif;
-}
-.widget_pages ul > li a,
+.widget_pages a.parent,
 .sidebar .widget h3 {
-  padding-top:2px;
-  margin-bottom:5px;
+  text-transform:uppercase;
+  padding-top:5px;
+  margin-bottom:7px;
   border-top:3px solid #747273;
+  cursor:default;
+  font-weight:bold;
+  font-size:14px;
 }
 /* Space between categories */
-.widget_pages ul > li {
-  padding-bottom:20px;
+.widget_pages li.parent {
+  padding-bottom:30px;
 }
-.widget_pages .children li {
-  padding-bottom:0;
+/* Generic widget links */
+.widget a {
+  color:#fff;
+  text-transform:uppercase;
+  text-decoration:none;
+  display:block;
 }
-.widget_pages .children a {
-  margin:0;
-}
-.widget .children a {
-  border-top:1px solid #fff;
-}
-/* First listed page in a category shouldn't have underlines */
-.widget_pages .children li:first-child a {
-  border-top:0;
-}
-/* Children should though */
+/* Children links */
 .widget .xoxo a,
-.widget_pages .children li:last-child a {
+.widget .children a {
+  font-size:11px;
+  padding-top:4px;
+  padding-bottom:4px;
   border-bottom:1px solid #fff;
 }
 /* Don't show generic "PAGES" h3 */
@@ -36,39 +33,12 @@
 }
 /* Don't show bullets */
 .widget {
-  list-style:none !important;
-}
-/* Category treatments */
-.sidebar .widget_pages ul a {
-  text-transform:uppercase;
-  font-weight:bold;
-  font-size:16px;
-  padding:3px 0;
-}
-/* Reinforcing children styles */
-.widget .children a {
-  font-size:13px !important;
-  font-weight:normal !important;
-}
-/* General widget link styles */
-.widget a {
-  color:#fff;
-  text-transform:uppercase;
-  text-decoration:none;
-  display:block;
-  padding-top:4px;
-  padding-bottom:4px;
+  list-style:none;
 }
 /* Active items */
 .widget .current_page_item a {
   background:#B2352E;
   font-weight:bold;
-}
-/* For active category, don't highlight the
- * sub-pages */
-.widget .current_page_item ul a {
-  background:none;
-  font-weight:normal;
 }
 /* Constrict the search textfield size */
 .widget input[type="text"] {
