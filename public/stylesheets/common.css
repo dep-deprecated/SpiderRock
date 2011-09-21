@@ -1,23 +1,20 @@
-h1 a {
-  background:url(../images/features/headerfooter/logo.png) 0 0 no-repeat;
-  display:block;
-  text-indent:-9999em;
-  width:299px;
-  height:72px;
-}
 a {
   color:#11B1F8;
   text-decoration:none;
 }
-p {
+p,
+pre {
   margin:10px 0;
+  display:block;
+  font-size:12px;
+  font-family:Arial;
 }
 a.algo,
 span.algo {
   background:url(../images/chrome/throbblers/algo_small.png) 0 50% no-repeat;
   padding-left:12px;
 }
-h2.algo {
+h2 span.algo {
   background-image:url(../images/chrome/throbblers/algo_large.png);
   background-position:0 50%;
   background-repeat:no-repeat;
@@ -32,6 +29,13 @@ h2 {
   font-weight:bold;
   font-size:15px;
   margin-bottom:30px;
+  text-transform:uppercase;
+}
+h2 a {
+  color:#fff;
+}
+h2 a:hover {
+  color:#fff;
 }
 h3, h4 {
   font-weight:bold;
@@ -59,11 +63,11 @@ blockquote {
   clear:both;
   line-height:19px;
 }
-ul.bullets li {
-  background:url(../images/chrome/throbblers/circle_bullet.png) 0 5px no-repeat;
+.contents ul li {
+  background:url(../images/chrome/throbblers/circle_bullet.png) 0 1px no-repeat;
   padding:0 0 20px 18px;
 }
-ul.bullets ul {
+.contents ul ul {
   margin-top:10px;
 }
 ul.picture_driven,
