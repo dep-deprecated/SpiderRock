@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>SpiderRock Styleguide</title>
+
+  <link href="../stylesheets/blueprint/screen.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--[if lt IE 8]>
+    <link href="../stylesheets/blueprint/ie.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <link href="../stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/common.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/elements.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/sidebar.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/home.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script src="../javascripts/application.js"></script>
+
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family:Arial;
+      font-size:12px;
+      color:#777;
+      background:#fff;
+    }
+    h1 {
+      color:#666;
+    }
+    h2 {
+      margin:10px 0;
+    }
+    h3 {
+      margin:0;
+    }
+    pre {
+      border:1px dotted #bbb;
+      padding:10px;
+      background:#ffffe7;
+      margin:0;
+      font-weight:bold;
+      font-family:Courier;
+      font-size:18px;
+      margin-bottom:20px;
+    }
+    label {
+      margin:3px 0 6px;
+      display:block;
+      color:#888;
+      text-transform:uppercase;
+    }
+    blockquote {
+      margin:0;
+    }
+    .codebox {
+      padding:10px;
+      background:#222;
+      border:1px solid #aaa;
+      margin:20px 0;
+    }
+    .codebox p:last-child {
+      font-weight:bold;
+      color:#fff;
+      margin-top:30px;
+      border-top:1px solid #666;
+      padding-top:5px;
+    }
+  </style>
+
+</head>
+  <body class="contents">
+    <h1>SpiderRock Styleguide</h1>
+    <h2>How to Produce Certain Styles in SpiderRock</h2>
+    <hr/>
+    <p>Hello. Here you'll find some basics on how to produce certain styles in SpiderRock. This guide assumes the author has at least a basic understanding of HTML.</p>
+    <div class="codebox">
+      <label>This code</label>
+      <pre>&lt;blockquote&gt;Hello&lt;/blockquote&gt;</pre>
+      <label>Produces this style</label>
+      <blockquote>To produce a box like this one</blockquote>
+      <p>Usage note: You can nest an unordered list in a blockquote as well.</p>
+    </div>
+    <div class="codebox">
+      <label>This code</label>
+      <pre>&lt;h3&gt;This is a sub-headline&lt;/h3&gt;</pre>
+      <label>Produces this style</label>
+      <h3>This is a sub-headline</h3>
+    </div>
+    <div class="codebox">
+      <label>This code</label>
+      <pre>
+&lt;ul&gt;
+  &lt;li&gt;Hello world.&lt;/li&gt;
+&lt;ul&gt;</pre>
+      <label>Produces this style</label>
+      <ul>
+        <li>Hello world.</li>
+      </ul>
+      <p>Usage note: You can add additional bullets with more list items.</p>
+    </div>
+    <div class="codebox">
+      <label>This code</label>
+      <pre>
+&lt;ul class="dashed"&gt;
+  &lt;li&gt;Hello world.&lt;/li&gt;
+&lt;ul&gt;</pre>
+      <label>Produces this style</label>
+      <ul class="dashed">
+        <li>Hello world.</li>
+      </ul>
+      <p>Usage note: You can add additional bullets with more list items.</p>
+    </div>
+    <div class="codebox">
+      <label>This code</label>
+      <pre>
+&lt;ul class="picture_driven"&gt;
+  &lt;li&gt;
+    &lt;div class="picture"&gt;
+      &lt;img src="http://fpoimg.com/130x120"/&gt;
+    &lt;/div&gt;
+    &lt;div class="caption"&gt;
+      &lt;h4&gt;HEADING&lt;/h4&gt;
+      &lt;ul class="dashed"&gt;
+        &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/li&gt;
+        &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/li&gt;
+        &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+      <label>Produces this style</label>
+      <ul class="picture_driven">
+        <li>
+          <div class="picture">
+            <img src="http://fpoimg.com/130x120"/>
+          </div>
+          <div class="caption">
+            <h4>HEADING</h4>
+            <ul class="dashed">
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <p>Usage note: You can add additional bullets (or sub-bullets) with more list items at the respective level.</p>
+    </div>
+    <div class="codebox">
+      <label>This code</label>
+      <pre>
+&lt;div class="picture_left"&gt;
+  &lt;div class="picture"&gt;
+    &lt;img src="http://fpoimg.com/384x267" /&gt;
+  &lt;/div&gt;
+  &lt;div class="caption"&gt;
+    &lt;h3&gt;THIS IS THE MAIN HEADLINE&lt;/h3&gt;
+    &lt;ul class="dashed"&gt;
+      &lt;li&gt;lorem&lt;/li&gt;
+      &lt;li&gt;lorem&lt;/li&gt;
+      &lt;li&gt;lorem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <label>Produces this style</label>
+      <div class="picture_left">
+        <div class="picture">
+          <img src="http://fpoimg.com/384x267" />
+        </div>
+        <div class="caption">
+          <h3>THIS IS THE MAIN HEADLINE</h3>
+          <ul class="dashed">
+            <li>lorem</li>
+            <li>lorem</li>
+            <li>lorem</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -9,23 +9,21 @@
   float:left;
 }
 .picture_left .picture {
-  width:375px;
-  min-height:265px;
+  width:384px;
   text-align:center;
 }
 .picture_left .picture img {
-  max-width:375px;
+  max-width:384px;
+  display:block;
 }
 .picture_left .caption {
-  width:305px;
-}
-.picture_left .caption .caption_contents {
-  padding:10px;
+  width:266px;
+  padding:15px;
 }
 .picture_left .caption p:first-child,
 .picture_left .caption h3:first-child {
   margin-top:0
 }
-.picture_left .caption .caption_contents p {
+.picture_left .caption p {
   font-weight:bold;
 }
