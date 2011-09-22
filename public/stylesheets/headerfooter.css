@@ -9,46 +9,14 @@ h1 a {
 
 /* Footer */
 #footer {
-  margin-top:45px;
-  padding:40px 0 10px 25px;
-  background:#464646 url(/images/features/headerfooter/logo_sm.png) 20px 20px no-repeat;
-}
-#footer .footer_links {
-  margin-left:210px;
-  overflow:hidden;
-  zoom:1;
-}
-#footer .footer_links > li {
-  float:left;
-  width:245px;
-}
-#footer .footer_links a {
-  display:block;
-  padding:5px 0;
-}
-#footer .footer_links a {
-  font-size:12px;
-  color:#fff;
-  text-transform:uppercase;
-}
-#footer a.parent {
-  cursor:default;
-  font-weight:bold;
-}
-#footer .footer_bottom {
-  clear:both;
-  display:block;
-  font-size:10px;
-  margin-top:40px;
-}
-#footer .footer_bottom a {
-  text-transform:uppercase;
-  display:inline-block;
-  margin:0 12px;
-  color:#fff;
-  font-weight:bold;
   font-size:11px;
+  padding:5px;
+  margin:45px 0;
+  border-top:1px solid #464646;
 }
-#footer .footer_bottom .rule606 {
-  color:#87CEF6;
+#footer span,
+#footer span a {
+  color:#8A2824;
+  display:inline-block;
+  padding:0 6px;
 }
