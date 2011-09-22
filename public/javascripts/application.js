@@ -3,6 +3,7 @@ $(document).ready(function(){
   init_parent_links();
   init_pre_conversion();
   init_home_class();
+  init_lightbox();
 });
 
 /* Scans the DOM for links with the
@@ -48,4 +49,8 @@ function init_home_class() {
   if ($(".contents h2").html().match("Home")) {
     $(".contents").addClass("home");
   }
+}
+
+function init_lightbox() {
+  $("a.lightbox").lightBox();
 }
