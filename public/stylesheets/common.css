@@ -109,6 +109,7 @@ ul.picture_driven .picture img {
 }
 ul.picture_driven .caption {
   width:445px;
+  padding-top:20px;
 }
 ul.dashed li {
   background:url(/images/chrome/throbblers/dash_bullet.png) 0 8px no-repeat;

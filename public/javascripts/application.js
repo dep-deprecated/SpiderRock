@@ -27,3 +27,21 @@ $(document).ready(function() {
     return false;
   });
 });
+
+
+/* Converting <pre> to <p> for friendlier pasting in to Wordpress */
+$(document).ready(function() {
+  $(".contents pre").each(function() {
+    $(this).replaceWith($('<p>' + nl2br(this.innerHTML) + '</p>'));
+  });
+})
+function nl2br (str, is_xhtml) {
+  var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+  return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
+}
+
+$(document).ready(function() {
+  if ($(".contents h2").html().match("Home")) {
+    $(".contents").addClass("home");
+  }
+})
