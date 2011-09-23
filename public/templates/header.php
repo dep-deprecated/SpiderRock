@@ -40,8 +40,9 @@
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
-  <div id="box_button" onclick="$('#login_box').fadeIn();$('#username').focus();">Log in</div>
+  <div id="box_button" onclick="$('#login_box').fadeIn();$('#username').focus(); return false;$"><img src="/images/chrome/buttons/client_login_button.png" border="0" /></div>
   <div id="login_box">
+    <div class="close_box" onclick="$('#login_box').hide();">x</div>
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" />
     <label for="password">Password:</label>

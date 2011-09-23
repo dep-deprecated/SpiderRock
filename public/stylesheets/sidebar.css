@@ -9,6 +9,9 @@
   font-size:14px;
 }
 /* Space between categories */
+.widget_pages {
+  zoom:1;
+}
 .widget_pages li.parent {
   padding-bottom:30px;
 }
