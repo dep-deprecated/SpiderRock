@@ -4,6 +4,9 @@ $(document).ready(function(){
   init_pre_conversion();
   init_home_class();
   init_lightbox();
+  init_cookie();
+  init_login();
+  init_sitelock();
 });
 
 /* Scans the DOM for links with the
@@ -54,5 +57,49 @@ function init_home_class() {
 function init_lightbox() {
   $("a.lightbox").fancybox({
     'autoScale': false
+  });
+}
+
+function init_sitelock() {
+  if($.cookie('spiderrock_granted') == "logged_in") {
+  } else {
+    $(".sidebar a, .home a, #footer a").click(function() {
+      alert("You must log in to view the site.")
+      return false;
+    });
+    $("input[type='password']").keypress(function(e){
+      if(e.which == 13){
+        $("#login_button").trigger('click');
+      }
+    });
+  }
+}
+function site_unlock() {
+  $(".sidebar a, .home a, #footer a").unbind("click");
+}
+function init_cookie() {
+  if($.cookie('spiderrock_granted') == "logged_in") {
+    site_unlock();
+  } else {
+    $("#box_button").show();
+  }
+}
+function store_cookie() {
+  $.cookie('spiderrock_granted', 'logged_in', { expires: 7, path: '/' });
+  console.log("Cookie stored");
+}
+function init_login() {
+  $("#login_button").click(function() {
+    if($("#username").val() == "spiderrock" && $("#password").val() == "algorithm") {
+      store_cookie();
+      site_unlock();
+      $("#box_button").hide();
+      $("#login_box").fadeOut();
+      $("#success_box").fadeIn();
+      setTimeout("$('#success_box').fadeOut()", 1500);
+      console.log($.cookie('spiderrock_granted'))
+    } else {
+      $("#error_msg").html("Password incorrect");
+    }
   });
 }
