@@ -30,7 +30,7 @@ h2 span.algo {
 h2 {
   background-color:#B2352E;
   display:inline-block;
-  padding:3px;
+  padding:3px 5px 3px 7px;
   color:#fff;
   letter-spacing:4px;
   font-weight:bold;
@@ -62,19 +62,25 @@ blockquote {
   font-weight:bold;
   font-size:14px;
   text-transform:uppercase;
-  padding:5px;
+  padding:13px 15px;
   display:block;
   margin:20px 0;
   color:#fff;
   font-style:normal;
   clear:both;
-  line-height:19px;
 }
 blockquote h3 {
   margin-top:0;
 }
 blockquote ul {
   margin-left:20px;
+}
+blockquote p {
+  margin:0;
+}
+.contents,
+.contents * {
+  line-height:19px;
 }
 .contents ul li {
   background:url(/images/chrome/throbblers/circle_bullet.png) 0 1px no-repeat;
