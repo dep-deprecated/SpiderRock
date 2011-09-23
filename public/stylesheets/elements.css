@@ -7,8 +7,6 @@
 .picture_left {
   overflow:hidden;
   zoom:1;
-  background:#3C3E3D;
-  opacity:0.8;
 }
 .picture_left .picture,
 .picture_left .caption {
@@ -23,13 +21,27 @@
   display:block;
 }
 .picture_left .caption {
-  width:266px;
+  width:246px;
   padding:15px;
+  background:#3C3E3D;
+  opacity:0.8;
+  min-height:237px;
 }
 .picture_left .caption p:first-child,
 .picture_left .caption h3:first-child {
   margin-top:0
 }
+.picture_left .caption h3 {
+  text-transform:none;
+  font-size:15px;
+}
 .picture_left .caption p {
   font-weight:bold;
+  font-size:13px;
+}
+.picture_left .caption p.loud {
+  margin-top:30px;
+}
+.picture_left .caption li {
+  font-size:13px;
 }
