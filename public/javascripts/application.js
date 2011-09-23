@@ -52,5 +52,7 @@ function init_home_class() {
 }
 
 function init_lightbox() {
-  $("a.lightbox").lightBox();
+  $("a.lightbox").fancybox({
+    'autoScale': false
+  });
 }
