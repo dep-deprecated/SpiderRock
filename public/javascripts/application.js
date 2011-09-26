@@ -63,9 +63,17 @@ function init_lightbox() {
 
 function init_cookie() {
   if($.cookie('spiderrock_granted') == "logged_in") {
+    if(get_query_var("logged_in")) {
+      $("#success_box").show();
+      setTimeout('$("#success_box").fadeOut()', 1500);
+    }
   } else {
     window.location = "/";
   }
+}
+function log_out() {
+  $.cookie('spiderrock_granted', 'logged_out', { path: '/' });
+  window.location = "/"; 
 }
 
 function init_image_dimensions() {
@@ -73,4 +81,15 @@ function init_image_dimensions() {
     $(this).attr("width", $(this).width())
     $(this).attr("height", $(this).height());
   });
+}
+
+function get_query_var(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  }
 }

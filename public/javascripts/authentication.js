@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 function site_unlock() {
-  window.location = "/home";
+  window.location = "/home?logged_in=1";
 }
 
 function init_cookie() {
@@ -27,7 +27,7 @@ function init_login() {
       store_cookie();
       site_unlock();
     } else {
-      $("#error_msg").html("Password incorrect");
+      $("#error_msg").html("Username or password incorrect");
       $("input[type='password']").select();
     }
   });
