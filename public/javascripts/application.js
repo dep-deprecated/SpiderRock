@@ -4,9 +4,14 @@ $(document).ready(function(){
   init_pre_conversion();
   init_home_class();
   init_lightbox();
+  /* Old Authentication model
+   * removed per request.
   init_cookie();
   init_login();
-  init_sitelock();
+  init_sitelock(); */
+});
+$(window).load(function() {
+  init_image_dimensions();
 });
 
 /* Scans the DOM for links with the
@@ -100,5 +105,12 @@ function init_login() {
     } else {
       $("#error_msg").html("Password incorrect");
     }
+  });
+}
+
+function init_image_dimensions() {
+  $("img").each(function() {
+    $(this).attr("width", $(this).width())
+    $(this).attr("height", $(this).height());
   });
 }
