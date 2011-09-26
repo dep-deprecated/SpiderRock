@@ -4,11 +4,7 @@ $(document).ready(function(){
   init_pre_conversion();
   init_home_class();
   init_lightbox();
-  /* Old Authentication model
-   * removed per request.
   init_cookie();
-  init_login();
-  init_sitelock(); */
 });
 $(window).load(function() {
   init_image_dimensions();
@@ -65,47 +61,11 @@ function init_lightbox() {
   });
 }
 
-function init_sitelock() {
-  if($.cookie('spiderrock_granted') == "logged_in") {
-  } else {
-    $(".sidebar a, .home p a, #footer a").click(function() {
-      alert("You must login to access this site.\n\nTo request a login, please call 1-312-256-9618 or email Annabelle Baldwin Annabelle.Baldwin@spiderrockexs.com");
-      return false;
-    });
-    $("input[type='password']").keypress(function(e){
-      if(e.which == 13){
-        $("#login_button").trigger('click');
-      }
-    });
-  }
-}
-function site_unlock() {
-  $(".sidebar a, .home p a, #footer a").unbind("click");
-  init_parent_links();
-}
 function init_cookie() {
   if($.cookie('spiderrock_granted') == "logged_in") {
-    site_unlock();
   } else {
-    $("#box_button").show();
+    window.location = "/";
   }
-}
-function store_cookie() {
-  $.cookie('spiderrock_granted', 'logged_in', { expires: 7, path: '/' });
-}
-function init_login() {
-  $("#login_button").click(function() {
-    if($("#username").val() == "spiderrock" && $("#password").val() == "algorithm") {
-      store_cookie();
-      site_unlock();
-      $("#box_button").hide();
-      $("#login_box").fadeOut();
-      $("#success_box").fadeIn();
-      setTimeout("$('#success_box').fadeOut()", 1500);
-    } else {
-      $("#error_msg").html("Password incorrect");
-    }
-  });
 }
 
 function init_image_dimensions() {
