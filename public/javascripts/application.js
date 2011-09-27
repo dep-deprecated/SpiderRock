@@ -5,8 +5,9 @@ $(document).ready(function(){
   init_home_class();
   init_lightbox();
   init_cookie();
-  init_login();
-  init_sitelock();
+});
+$(window).load(function() {
+  init_image_dimensions();
 });
 
 /* Scans the DOM for links with the
@@ -60,45 +61,35 @@ function init_lightbox() {
   });
 }
 
-function init_sitelock() {
-  if($.cookie('spiderrock_granted') == "logged_in") {
-  } else {
-    $(".sidebar a, .home p a, #footer a").click(function() {
-      alert("You must login to access this site.\n\nTo request a login, please call 1-312-256-9618 or email Annabelle Baldwin Annabelle.Baldwin@spiderrockexs.com");
-      return false;
-    });
-    $("input[type='password']").keypress(function(e){
-      if(e.which == 13){
-        $("#login_button").trigger('click');
-      }
-    });
-  }
-}
-function site_unlock() {
-  $(".sidebar a, .home p a, #footer a").unbind("click");
-  init_parent_links();
-}
 function init_cookie() {
   if($.cookie('spiderrock_granted') == "logged_in") {
-    site_unlock();
+    if(get_query_var("logged_in")) {
+      $("#success_box").show();
+      setTimeout('$("#success_box").fadeOut()', 1500);
+    }
   } else {
-    $("#box_button").show();
+    window.location = "/";
   }
 }
-function store_cookie() {
-  $.cookie('spiderrock_granted', 'logged_in', { expires: 7, path: '/' });
+function log_out() {
+  $.cookie('spiderrock_granted', 'logged_out', { path: '/' });
+  window.location = "/"; 
 }
-function init_login() {
-  $("#login_button").click(function() {
-    if($("#username").val() == "spiderrock" && $("#password").val() == "algorithm") {
-      store_cookie();
-      site_unlock();
-      $("#box_button").hide();
-      $("#login_box").fadeOut();
-      $("#success_box").fadeIn();
-      setTimeout("$('#success_box').fadeOut()", 1500);
-    } else {
-      $("#error_msg").html("Password incorrect");
-    }
+
+function init_image_dimensions() {
+  $("img").each(function() {
+    $(this).attr("width", $(this).width())
+    $(this).attr("height", $(this).height());
   });
+}
+
+function get_query_var(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  }
 }

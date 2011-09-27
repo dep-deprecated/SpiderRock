@@ -40,18 +40,9 @@
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
-  <div id="box_button" onclick="$('#login_box').fadeIn();$('#username').focus(); return false;$"><img src="/images/chrome/buttons/client_login_button.png" border="0" /></div>
-  <div id="login_box">
-    <div class="close_box" onclick="$('#login_box').hide();">x</div>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" />
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" />
-    <p class="error" id="error_msg"></p>
-    <input type="button" value="Log in" id="login_button" />
-  </div>
+  <a href="#" onclick="log_out(); return false;" id="log_out_link">Log out</a>
   <div id="success_box" style="display:none">
-    success!
+    You have successfully logged into the SpiderRock website
   </div>
   <div id="wrapper" class="container">
     <div class="span-24 header">

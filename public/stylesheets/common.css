@@ -83,7 +83,7 @@ blockquote p {
   line-height:19px;
 }
 .contents ul li {
-  background:url(/images/chrome/throbblers/circle_bullet.png) 0 1px no-repeat;
+  background:url(/images/chrome/throbblers/circle_bullet.png) 0 3px no-repeat;
   padding:0 0 20px 18px;
 }
 .contents ul ul {
@@ -131,8 +131,8 @@ img.bordered {
 /* Forms */
 #login_box {
   position:absolute;
-  top:20px;
-  right:20px;
+  top:305px;
+  left:230px;
   width:150px;
   padding:20px;
   background:#111;
@@ -142,13 +142,20 @@ img.bordered {
 }
 .error {
   background:none;
-  font-color:red;
+  color:red;
   font-weight:bold;
   border:0;
-  margin:0;
+  margin:0 0 5px;
 }
 #login_box label {
   display:block;
+  color:#fff;
+  font-family:Arial;
+  font-size:11px;
+}
+#login_box input {
+  margin-bottom:10px;
+  outline:none;
 }
 #box_button {
   position:absolute;
@@ -171,9 +178,6 @@ img.bordered {
   color:#fff;
   background:green;
   font-weight:bold;
-}
-#login_box label:last-child {
-  margin-top:10px;
 }
 #login_box .close_box {
   position:absolute;

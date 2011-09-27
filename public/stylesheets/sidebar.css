@@ -40,7 +40,7 @@
 }
 /* Active items */
 .widget .current_page_item a {
-  background:#B2352E;
+  background:#6e6e6e;
   font-weight:bold;
 }
 /* Constrict the search textfield size */
