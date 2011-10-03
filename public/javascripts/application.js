@@ -5,10 +5,17 @@ $(document).ready(function(){
   init_home_class();
   init_lightbox();
   init_cookie();
+  init_sidebar();
 });
 $(window).load(function() {
   init_image_dimensions();
 });
+
+/* Sidebar doesn't look very good when it's rendering,
+ * so lets show it after pageload. */
+function init_sidebar() {
+  $(".sidebar").css("visibility", "visible");
+}
 
 /* Scans the DOM for links with the
  * rel="external" attribute and
