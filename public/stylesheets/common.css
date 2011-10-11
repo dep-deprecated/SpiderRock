@@ -53,6 +53,9 @@ h3 {
   margin:30px 0 10px;
   font-size:14px;
 }
+.entry-content h3:first-child {
+  margin-top:0;
+}
 h4 {
   margin:0 0 5px 0;
   font-size:12px;
@@ -192,4 +195,14 @@ img.bordered {
   padding:15px;
   background:#000;
   opacity:0.8;
+}
+.black p:first-child {
+  margin-top:0;
+}
+.black p:last-child {
+  margin-bottom:0;
+}
+
+.entry-content p:first-child {
+  margin-top:0;
 }

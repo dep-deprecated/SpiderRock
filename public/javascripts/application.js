@@ -4,7 +4,7 @@ $(document).ready(function(){
   init_pre_conversion();
   init_home_class();
   init_lightbox();
-  init_cookie();
+  setTimeout("init_cookie()", 100);
   init_sidebar();
 });
 $(window).load(function() {
@@ -73,6 +73,8 @@ function init_cookie() {
     if(get_query_var("logged_in")) {
       $("#success_box").show();
       setTimeout('$("#success_box").fadeOut()', 1500);
+    } else {
+      return true;
     }
   } else {
     window.location = "/";
@@ -80,7 +82,7 @@ function init_cookie() {
 }
 function log_out() {
   $.cookie('spiderrock_granted', 'logged_out', { path: '/' });
-  window.location = "/"; 
+  window.location = "/";
 }
 
 function init_image_dimensions() {
