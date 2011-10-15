@@ -4,18 +4,12 @@ $(document).ready(function(){
   init_pre_conversion();
   init_home_class();
   init_lightbox();
-  setTimeout("init_cookie()", 100);
-  init_sidebar();
+  $("#wrapper").css("visibility", "hidden");
 });
 $(window).load(function() {
   init_image_dimensions();
+  init_cookie()
 });
-
-/* Sidebar doesn't look very good when it's rendering,
- * so lets show it after pageload. */
-function init_sidebar() {
-  $(".sidebar").css("visibility", "visible");
-}
 
 /* Scans the DOM for links with the
  * rel="external" attribute and
@@ -70,6 +64,7 @@ function init_lightbox() {
 
 function init_cookie() {
   if($.cookie('spiderrock_granted') == "logged_in") {
+    $("#wrapper").css("visibility", "visible");
     if(get_query_var("logged_in")) {
       $("#success_box").show();
       setTimeout('$("#success_box").fadeOut()', 1500);
