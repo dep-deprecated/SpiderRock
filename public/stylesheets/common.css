@@ -194,6 +194,8 @@ img.bordered {
 .black {
   padding:15px;
   background:#000;
+  overflow:hidden;
+  zoom:1;
 }
 .black p:first-child {
   margin-top:0;

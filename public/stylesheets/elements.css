@@ -45,3 +45,33 @@
 .picture_left .caption li {
   font-size:13px;
 }
+
+#contact .col {
+  width:49% !important;
+}
+#contact form label {
+  display:block;
+  margin-top:5px;
+  padding-left:3px;
+  font-weight:normal;
+}
+#contact form input,
+#contact form textarea {
+  width:285px;
+  display:block;
+}
+#contact form textarea {
+  width:277px;
+  height:190px;
+}
+#contact form input[type="submit"] {
+  width:122px;
+  height:23px;
+  border:0;
+  background:url(/images/chrome/buttons/submit.png) top left no-repeat;
+  text-indent:-9999em;
+  margin-top:10px !important;
+}
+#contact small a {
+  color:#11B1F8 !important;
+}
