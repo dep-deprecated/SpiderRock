@@ -4,11 +4,11 @@ $(document).ready(function(){
   init_pre_conversion();
   init_home_class();
   init_lightbox();
-  $("#wrapper").css("visibility", "hidden");
+  //$("#wrapper").css("visibility", "hidden");
 });
 $(window).load(function() {
   init_image_dimensions();
-  init_cookie()
+  //init_cookie()
 });
 
 /* Scans the DOM for links with the

@@ -1,0 +1,44 @@
+.imageHome {
+        position: relative;
+        width: 100%; /* for IE 6 */
+}
+
+h5 {
+    
+    position: absolute;
+    top: 175px;
+    left: 225px;
+    width: 325px;
+    height: 800px;
+
+}
+
+h5 span {
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0,0,0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px;
+}
+
+h6 {
+    
+    position: absolute;
+    top: 300px;
+    left: 275px;
+    width: 400px;
+    height: 800px;
+
+}
+
+h6 span {
+    color: white;
+    size: 20px;
+    font: bold 20px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0,0,0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
